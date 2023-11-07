@@ -4,6 +4,8 @@ import { createRenderer } from "./systems/renderer";
 import { createCube } from './components/cube.js';
 import { Resizer } from "./systems/Resizer";
 
+// These variables are module-scoped: we cannot access them
+// from outside the module
 let scene;
 let camera;
 let renderer;

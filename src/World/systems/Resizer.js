@@ -4,6 +4,7 @@ export class Resizer {
         camera.aspect = container.clientWidth / container.clientHeight;
 
         // update the camera's frustum
+        // The camera stores its frustum in a mathematical object called a projection matrix, and, to update this, we need to call the camera’s .updateProjectionMatrix method.
         camera.updateProjectionMatrix();
 
         // update the size of the renderer AND the canvas
