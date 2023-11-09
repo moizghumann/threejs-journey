@@ -5,7 +5,7 @@ export function createLight() {
     const light = new DirectionalLight('white', 8);
 
     // The DirectionalLight shines from light.position to light.target.position
-    light.position.set(-3, 8, 6);
+    light.position.set(-3, 4, 6);
 
     return light
 }

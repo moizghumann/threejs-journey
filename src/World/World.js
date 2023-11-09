@@ -18,6 +18,7 @@ export class World {
         camera = createCamera();
         renderer = createRenderer();
 
+        // adds the graphics created by the renderer to a specific part of a web page, referred to as a "container." It's like putting a picture or a video on a webpage.
         container.appendChild(renderer.domElement);
 
         const cube = createCube();
@@ -26,6 +27,7 @@ export class World {
         scene.add(cube, light);
         scene.add(cube_2, light)
 
+        // reason why resizer here is an instance of a class rather than a module function like createScene etc is because it is encapsulating three functions in it that collectively 'resize' and 'update'. also it helps manage state i.e remembering current size and shape of camera and canvas
         const resizer = new Resizer(container, camera, renderer);
     }
 
