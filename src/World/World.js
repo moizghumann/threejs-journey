@@ -28,7 +28,7 @@ export class World {
         const light = createLight();
         scene.add(cube, light);
         scene.add(cube_2, light);
-        cube.add(cube_3, light);
+        cube.add(cube_3);
 
 
         // reason why resizer here is an instance of a class rather than a module function like createScene etc is because it is encapsulating three functions in it that collectively 'resize' and 'update'. also it helps manage state i.e remembering current size and shape of camera and canvas
