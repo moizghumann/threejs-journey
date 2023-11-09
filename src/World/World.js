@@ -5,6 +5,7 @@ import { createCube } from './components/cube.js';
 import { Resizer } from "./systems/Resizer";
 import { createLight } from "./components/lights";
 import { createCube2 } from "./components/cube2";
+import { createCube3 } from "./components/cube3";
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
@@ -23,9 +24,12 @@ export class World {
 
         const cube = createCube();
         const cube_2 = createCube2();
+        const cube_3 = createCube3();
         const light = createLight();
         scene.add(cube, light);
-        scene.add(cube_2, light)
+        scene.add(cube_2, light);
+        cube.add(cube_3, light);
+
 
         // reason why resizer here is an instance of a class rather than a module function like createScene etc is because it is encapsulating three functions in it that collectively 'resize' and 'update'. also it helps manage state i.e remembering current size and shape of camera and canvas
         const resizer = new Resizer(container, camera, renderer);

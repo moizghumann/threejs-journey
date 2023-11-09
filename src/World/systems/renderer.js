@@ -1,4 +1,4 @@
-import { WebGLRenderer } from "three";
+import { PCFSoftShadowMap, WebGLRenderer } from "three";
 
 function createRenderer() {
     const renderer = new WebGLRenderer();
